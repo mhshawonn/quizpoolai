@@ -28,7 +28,7 @@ whisper_model = None
 app = FastAPI(title="YouTube Quiz Generator")
 
 # Configuration
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyBLR4CKsUH-L5OQIkgt9aZKDZ3t1ekPzGU")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY", "")
 
 # Validate Gemini API key
@@ -36,7 +36,7 @@ if not GEMINI_API_KEY or GEMINI_API_KEY == "your-gemini-api-key":
     print("⚠ WARNING: GEMINI_API_KEY not set! Please set it as environment variable.")
 
 # Initialize Gemini
-genai.configure(api_key="AIzaSyB-AyQuIWJ3GCiFFJsUy7EMtDxI3u_0GmE")
+genai.configure(api_key="")
 gemini_model = genai.GenerativeModel('gemini-2.5-flash')
 
 # Initialize Pinecone (optional)
