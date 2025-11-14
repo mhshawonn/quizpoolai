@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --duo-primary: #2bb673;
+  --duo-accent: #ffd164;
+  --duo-blue: #2f80ed;
+  --duo-bg: #f7fbff;
+}
+
+body {
+  background: radial-gradient(circle at 10% 20%, rgba(96, 211, 148, 0.25), transparent 55%),
+    radial-gradient(circle at 80% 0%, rgba(47, 128, 237, 0.2), transparent 50%), var(--duo-bg);
+  color: #063b2b;
+  min-height: 100vh;
+  font-feature-settings: "liga" 1, "calt" 1;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 24px 40px rgba(15, 118, 83, 0.12);
+  backdrop-filter: blur(16px);
+}
+
+.duo-card {
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+}
+
+.xp-chip {
+  background: linear-gradient(120deg, #ffd164, #ffb347);
+  border-radius: 999px;
+  color: #7a4b00;
+  font-weight: 700;
+  padding: 0.25rem 0.9rem;
+}
+
+.coin-color {
+  color: var(--duo-accent);
+}
+
+.glass-bubble {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  border-radius: 999px;
+  box-shadow: 0 25px 45px rgba(47, 128, 237, 0.18);
+}
